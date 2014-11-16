@@ -46,9 +46,13 @@
 
     Handlebars.registerHelper('type-value', function(type, options) {
         var value = this[this.type],
-            str = "strength-4";
+            str = "strength-5";
 
         if(value < 20){
+        	str = "strength-4";
+        }
+
+        if(value < 15){
         	str = "strength-3";
         }
 
