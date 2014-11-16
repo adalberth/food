@@ -7,20 +7,38 @@
 	
 	<script id="item-template" type="text/x-handlebars-template">
 	{{#each items}}
-		<div class="item {{type}} {{#type-value-diff-color}}{{/type-value-diff-color}}" data-id="{{id}}" data-category="{{category}}" data-type="{{type}}" data-syre="{{syre}}" data-base="{{base}}">
+		<div class="item {{type}} {{#type-value}}{{/type-value}}" data-id="{{id}}" data-category="{{category}}" data-type="{{type}}" data-value="{{value}}">
 			<div class="inner">
 				<h3>{{name}}</h3>
-				<span class="value">{{#type-value}}{{/type-value}}</span> 
+				<span class="value">{{value}}</span> 
 			</div>
 		</div>
 	{{/each}}
 	</script>
 </head>
 <body>
-	<div class="container">
-		
+	<div class="search">
+		<form action="" class="form">
+
+			<div class="input">
+				<input type="text" id="search" placeholder="Søg efter navn">
+			</div>
+
+			<div class="select">
+				<select name="category" id="category">
+					<option value="" selected>All Categories</option>
+				</select>
+			</div>
+			
+			<div class="radio">
+				<input type="radio" name="type" value="" checked="checked">Begge<br>
+				<input type="radio" name="type" value="syre">Syre<br>
+				<input type="radio" name="type" value="base">Base
+			</div>
+
+		</form>
 	</div>
-	
+	<div class="container"></div>
 	<script src='_/js/vendor.min.js'></script>
 	<script src='_/js/main.min.js'></script>
 </body>
