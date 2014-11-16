@@ -48,12 +48,16 @@
         var value = this[this.type],
             str = "strength-4";
 
-        if(value < 5){
-        	str = "strength-1";
-        } if (value < 10) {
-        	str = "strength-2";
-        } else if (value < 20) {
+        if(value < 20){
         	str = "strength-3";
+        }
+
+        if (value < 10) {
+        	str = "strength-2";
+        }
+
+        if (value < 5) {
+        	str = "strength-1";
         }
 
         return str;
