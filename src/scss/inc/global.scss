@@ -1,0 +1,53 @@
+body{
+	background-color: #fff;
+	margin: 0;padding: 0;
+}
+
+h1,h2,h3,h4,h5,h6{
+	margin: 0;padding: 0;
+}
+
+.item{
+	position: relative;
+	display: block;
+	background-color: #fff;
+	float: left;
+	margin: 10px;
+	padding: 10px;
+	border-radius:10px;
+	overflow:hidden;
+	border:1px solid rgba(0,0,0,0.15); 
+	
+	&:before{
+		content:"";
+		position: absolute;
+		top: 0;left: 0;width: 100%;height: 100%;
+		z-index: 0;
+	}
+
+	&.strength-1:before{
+		opacity:0.25;
+	}
+	&.strength-2:before{
+		opacity:0.5;
+	}
+	&.strength-3:before{
+		opacity:0.75;
+	}
+	&.strength-4:before{
+		opacity:1;
+	}
+
+	&.syre:before{
+		background-color: rgba(255,0,0,0.75);
+	}
+
+	&.base:before{
+		background-color: rgba(0,255,0,0.75);
+	}
+
+	.inner{
+		position: relative;
+		z-index: 0;
+	}
+}

@@ -1,0 +1,53 @@
+body {
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+.item {
+  position: relative;
+  display: block;
+  background-color: #fff;
+  float: left;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+.item:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.item.strength-1:before {
+  opacity: 0.25;
+}
+.item.strength-2:before {
+  opacity: 0.5;
+}
+.item.strength-3:before {
+  opacity: 0.75;
+}
+.item.strength-4:before {
+  opacity: 1;
+}
+.item.syre:before {
+  background-color: rgba(255, 0, 0, 0.75);
+}
+.item.base:before {
+  background-color: rgba(0, 255, 0, 0.75);
+}
+.item .inner {
+  position: relative;
+  z-index: 0;
+}
